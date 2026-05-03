@@ -1,98 +1,25 @@
+/* Style for the library XML */
 library {
     display: block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 40px 20px;
-    min-height: 100vh;
+    font-family: "Georgia", serif;
+    background-color: #fff3e0;
+    padding: 15px;
 }
 
-library::before {
-    content: "Library Catalog";
-    display: block;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
+/* Style each book */
 book {
     display: block;
-    max-width: 800px;
-    margin: 0 auto 25px auto;
-    padding: 25px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #ff9800;
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 
-book:hover {
-    transform: translateY(-5px);
-}
-
-id {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-title {
+/* Style elements inside book */
+id, title, author, published_year, available_copies {
     display: block;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 10px 0;
-    line-height: 1.4;
-}
-
-author {
-    display: block;
-    font-size: 1rem;
-    color: #4a5568;
-    margin: 8px 0;
-}
-
-author::before {
-    content: "by ";
-    color: #718096;
-}
-
-published_year {
-    display: inline-block;
-    font-size: 0.9rem;
-    color: #667eea;
-    background: #e0e7ff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    margin: 10px 10px 10px 0;
-}
-
-available_copies {
-    display: inline-block;
-    font-size: 0.9rem;
-    color: #059669;
-    background: #d1fae5;
-    padding: 6px 12px;
-    border-radius: 6px;
-    margin: 10px 0;
-}
-
-category {
-    display: inline-block;
-    font-size: 0.85rem;
-    color: #7c3aed;
-    background: #ede9fe;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 10px;
+    font-weight: bold;
+    color: #e65100;
+    margin: 5px 0;
 }
