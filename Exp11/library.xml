@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="library.css"?>
+<library>
+    <book>
+        <id>001</id>
+        <title>Clean Code: A Handbook of Agile Software Craftsmanship</title>
+        <author>Robert C. Martin</author>
+        <published_year>2008</published_year>
+        <available_copies>5</available_copies>
+        <category>Programming</category>
+    </book>
+    <book>
+        <id>002</id>
+        <title>Introduction to Algorithms</title>
+        <author>Thomas H. Cormen</author>
+        <published_year>2009</published_year>
+        <available_copies>3</available_copies>
+        <category>Computer Science</category>
+    </book>
+    <book>
+        <id>003</id>
+        <title>Design Patterns: Elements of Reusable Object-Oriented Software</title>
+        <author>Erich Gamma</author>
+        <published_year>1994</published_year>
+        <available_copies>7</available_copies>
+        <category>Software Engineering</category>
+    </book>
+    <book>
+        <id>004</id>
+        <title>The Pragmatic Programmer</title>
+        <author>Andrew Hunt</author>
+        <published_year>1999</published_year>
+        <available_copies>4</available_copies>
+        <category>Programming</category>
+    </book>
+    <book>
+        <id>005</id>
+        <title>JavaScript: The Good Parts</title>
+        <author>Douglas Crockford</author>
+        <published_year>2008</published_year>
+        <available_copies>6</available_copies>
+        <category>Web Development</category>
+    </book>
+    <book>
+        <id>006</id>
+        <title>Python Crash Course</title>
+        <author>Eric Matthes</author>
+        <published_year>2019</published_year>
+        <available_copies>8</available_copies>
+        <category>Programming</category>
+    </book>
+</library>

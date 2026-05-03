@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable | DYPCET</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .timetable-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.95rem;
+        }
+
+        caption {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        th:first-child {
+            border-radius: 10px 0 0 0;
+        }
+
+        th:last-child {
+            border-radius: 0 10px 0 0;
+        }
+
+        td {
+            padding: 15px 12px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+
+        tr:hover td {
+            background: #f7fafc;
+        }
+
+        td:first-child {
+            font-weight: 600;
+            color: #667eea;
+            background: #f7fafc;
+        }
+
+        .lunch-cell {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            color: #92400e;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+
+        .lab-session {
+            background: #e0e7ff;
+            color: #4338ca;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+
+        .theory-session {
+            background: #d1fae5;
+            color: #065f46;
+            border-radius: 6px;
+        }
+
+        .empty-slot {
+            color: #a0aec0;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .legend-lab { background: #e0e7ff; }
+        .legend-theory { background: #d1fae5; }
+        .legend-lunch { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>D.Y. Patil College of Engineering & Technology</h1>
+            <p>Computer Science & Engineering | Semester IV Timetable</p>
+        </header>
+
+        <div class="timetable-wrapper">
+            <table>
+                <caption>Class Timetable</caption>
+                <thead>
+                    <tr>
+                        <th>Day / Time</th>
+                        <th>9:00 - 11:00</th>
+                        <th>11:15 - 12:15</th>
+                        <th>12:15 - 1:15</th>
+                        <th>1:15 - 2:00</th>
+                        <th>2:00 - 3:00</th>
+                        <th>3:00 - 4:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td><span class="lab-session">TTL Lab</span></td>
+                        <td><span class="theory-session">AOOC</span></td>
+                        <td><span class="theory-session">MDM</span></td>
+                        <td rowspan="5" class="lunch-cell">Lunch Break</td>
+                        <td><span class="theory-session">DSL</span></td>
+                        <td class="empty-slot">-</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td><span class="lab-session">WD Lab</span></td>
+                        <td><span class="theory-session">AT</span></td>
+                        <td><span class="theory-session">DSA</span></td>
+                        <td><span class="theory-session">WD</span></td>
+                        <td><span class="theory-session">ENV</span></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td><span class="lab-session">TPMS Lab</span></td>
+                        <td><span class="theory-session">AOOC</span></td>
+                        <td><span class="theory-session">MDM</span></td>
+                        <td><span class="theory-session">DSL</span></td>
+                        <td><span class="theory-session">ENV</span></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td><span class="lab-session">AOOC Lab</span></td>
+                        <td><span class="theory-session">AT</span></td>
+                        <td><span class="theory-session">AT</span></td>
+                        <td class="empty-slot">-</td>
+                        <td><span class="theory-session">OEC</span></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td><span class="lab-session">DSL Lab</span></td>
+                        <td><span class="lab-session">TTL Lab</span></td>
+                        <td><span class="theory-session">TPMS</span></td>
+                        <td><span class="theory-session">OEC</span></td>
+                        <td><span class="theory-session">DSA</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color legend-lab"></div>
+                    <span>Practical / Lab Session</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-theory"></div>
+                    <span>Theory Lecture</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-lunch"></div>
+                    <span>Lunch Break</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
